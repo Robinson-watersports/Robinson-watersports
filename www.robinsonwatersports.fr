@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robinson Watersports</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(90deg, #0077C8, #FFC107);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #004F91;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: url('https://via.placeholder.com/1500x600') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 5px #000;
+            font-size: 2em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .activities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .activity {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .activity img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .activity h3 {
+            padding: 10px;
+            background: #FFC107;
+            margin: 0;
+            text-align: center;
+        }
+
+        .activity p {
+            padding: 10px;
+            font-size: 1em;
+            text-align: justify;
+        }
+
+        footer {
+            background: #004F91;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: #FFC107;
+            text-decoration: none;
+        }
+
+        .reservation-form {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .reservation-form input, .reservation-form select, .reservation-form button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .reservation-form button {
+            background: #0077C8;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+
+        .reservation-form button:hover {
+            background: #005f91;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Robinson Watersports</h1>
+        <p>Adrenaline on the water, for unforgettable moments!</p>
+    </header>
+
+    <nav>
+        <a href="#activities">Activities</a>
+        <a href="#about">About Us</a>
+        <a href="#reservation">Reservation</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="hero">
+        Live the thrill of motorized watersports today!
+    </div>
+
+    <section id="activities">
+        <h2>Our Activities</h2>
+        <div class="activities">
+            <div class="activity">
+                <img src="https://via.placeholder.com/300x200" alt="Jet Ski">
+                <h3>Jet Ski</h3>
+                <p>Feel the thrill of speed and freedom on the water with our high-performance jet skis.</p>
+            </div>
+            <div class="activity">
+                <img src="https://via.placeholder.com/300x200" alt="Parasailing">
+                <h3>Parasailing</h3>
+                <p>Enjoy breathtaking views from above while being towed behind a boat!</p>
+            </div>
+            <div class="activity">
+                <img src="https://via.placeholder.com/300x200" alt="Towable Tubes">
+                <h3>Towable Tubes</h3>
+                <p>Hold on tight and get ready for the ultimate fun ride on our towable tubes.</p>
+            </div>
+            <div class="activity">
+                <img src="https://via.placeholder.com/300x200" alt="Wakeboarding">
+                <h3>Wakeboarding</h3>
+                <p>Challenge yourself and master the art of wakeboarding with our expert guides.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Robinson Watersports is your go-to destination for exhilarating water adventures. We provide top-notch equipment and experienced instructors to ensure safety and fun for everyone. Whether you're a thrill-seeker or just looking for a relaxing day on the water, we have something for you!</p>
+    </section>
+
+    <section id="reservation">
+        <h2>Online Reservation</h2>
+        <div class="reservation-form">
+            <form action="#" method="post">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+                <label for="activity">Choose an Activity:</label>
+                <select id="activity" name="activity" required>
+                    <option value="jet-ski">Jet Ski</option>
+                    <option value="parasailing">Parasailing</option>
+                    <option value="towable-tubes">Towable Tubes</option>
+                    <option value="wakeboarding">Wakeboarding</option>
+                </select>
+
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Preferred Time:</label>
+                <input type="time" id="time" name="time" required>
+
+                <button type="submit">Submit Reservation</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:robinsonwatersports@gmail.com">robinsonwatersports@gmail.com</a></p>
+        <p>Phone: +1 (234) 567-890</p>
+        <p>Address: 123 Ocean Drive, Tropical Island</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Robinson Watersports. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
